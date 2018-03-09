@@ -40,6 +40,7 @@ class Channel extends Base {
         this.routes.post("/", (context, next) => {
             let item = context.request.body
             channel.add(item)
+            console.log('新增的频道',item)
             this.renderJSON(context, {
                 status: 0
             })

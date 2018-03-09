@@ -5,7 +5,7 @@ class Controller{
         this.routes = new Router()
     }
     renderJSON(context, data){
-        context.set('Content-Type', 'application/josn')
+        context.set('Content-Type', 'application/json')
         context.body = data
     }
     route(router, path){
