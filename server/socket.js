@@ -52,6 +52,8 @@ class Socket {
                      */
                     ffmpeg(stream).videoCodec('libx264').audioCodec('aac').addOption('-mpegts_copyts', 1).addOption('-strict', -2).format('mpegts').addOutputOption('-output_ts_offset', this.duration)
                         .on('error', (err) => {
+
+                            //  推流的过程中出错
                             debug('an error happened: ' + err.message);
                             /**
                              * 保存视频片段到磁盘

@@ -17,6 +17,7 @@ export default class LiveSocket {
       console.debug('connecting socket', id)
       this.connectionId = id
       const socket = this.socket = io(`${server}/${id}` || `http://${host}:${port}/${id}`)
+      console.log('woxx',socket);
       socket.on('connect', () => {
         this.isConnected = true
         console.log('socket connected')

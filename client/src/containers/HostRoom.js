@@ -256,6 +256,7 @@ class HostRoomContainer extends Component {
     liveSocket.connect(id).then(()=>{
       this.setState({ status: LIVE_STATUS.SOCKET_CONNECTED })
       liveSocket.on('online', (count)=>{
+        console.log('我连上了')
         this.setState({
           liveCount: count
         })
